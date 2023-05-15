@@ -1,2 +1,2 @@
 # Intune
-Script para verificar e instalar o Microsoft Edge e o Intune
+## Scripts para automatizar rotinas de manutenção de dispositivos Linux no Intune
