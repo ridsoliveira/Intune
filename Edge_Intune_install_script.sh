@@ -10,7 +10,7 @@ if ! command -v msedge &> /dev/null; then
   ubuntu_version=$(lsb_release -r -s)
 
   # Baixar o pacote DEB do Microsoft Edge
-  if [[ $ubuntu_version == "20.04" || $ubuntu_version == "22.04"]]; then
+  if [[ $ubuntu_version == "20.04" || $ubuntu_version == "22.04" ]]; then
     ## Setup
     # Instalar chave de assinatura do pacote Microsoft
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -19,18 +19,14 @@ if ! command -v msedge &> /dev/null; then
     sudo rm microsoft.gpg
     ## Install
     sudo apt update
-    sudo apt install microsoft-edge-beta
+    sudo apt install microsoft-edge-beta -y
   else
     echo "Versão do Ubuntu não suportada."
     exit 1
   fi
 
-  # Instalar o pacote DEB do Microsoft Edge
-  sudo dpkg -i edge.deb
-  sudo apt install -f -y
-
   # Remover o pacote DEB do Microsoft Edge
-  rm edge.deb
+  rm microsoft-edge-beta.list
 else
   echo "Microsoft Edge já está instalado."
   sleep 5
@@ -52,6 +48,6 @@ else
 fi
 
 # Reinicialize o dispositivo
-echo "Reinicializando o dispositivos em 30 segundos. Aguarde..."
+echo "Reinicializando o dispositivo em 30 segundos. Aguarde..."
 sleep 3
 sudo reboot
