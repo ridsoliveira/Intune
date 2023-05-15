@@ -1,5 +1,8 @@
 #!/bin/bash
 # ATENÇÃO! Esse sscript ainda está em desenvolvimento e testes. 
+# Atualiza o SO
+sudo apt update
+sudo apt upgrade
 
 # Vai adicionar o repositório do MS Teams
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor > microsoft.gpg
