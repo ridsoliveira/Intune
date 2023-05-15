@@ -36,7 +36,7 @@ fi
 if [[ $ubuntu_version == "20.04" || $ubuntu_version == "22.04" ]]; then
   echo "Instalar o aplicativo Microsoft Intune. Aguarde..."
   sleep 3
-   sudo apt install curl gpg -y
+  sudo apt install curl gpg -y
   # Instalar chave de assinatura do pacote Microsoft
   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
   sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
@@ -53,5 +53,5 @@ fi
 
 # Reinicializar o dispositivo
 echo "Reinicializando o dispositivo em 30 segundos. Aguarde..."
-sleep 3
+sleep 30
 sudo reboot
