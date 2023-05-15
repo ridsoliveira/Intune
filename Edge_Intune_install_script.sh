@@ -32,12 +32,8 @@ else
   sleep 5
 fi
 
-# Verificar a versão do Ubuntu
-ubuntu_version=$(lsb_release -r -s)
-
-if [[ $ubuntu_version == "20.04" ]]; then
-  # Instalação para Ubuntu 20.04
-  # Instalar o aplicativo Microsoft Intune
+# Instalação do aplicativo Microsoft Intune para Ubuntu 20.04
+if [[ $ubuntu_version == "20.04" || $ubuntu_version == "22.04" ]]; then
   echo "Instalar o aplicativo Microsoft Intune. Aguarde..."
   sleep 3
   sudo apt update
@@ -47,7 +43,7 @@ else
   exit 1
 fi
 
-# Reinicialize o dispositivo
+# Reinicializar o dispositivo
 echo "Reinicializando o dispositivo em 30 segundos. Aguarde..."
 sleep 3
 sudo reboot
