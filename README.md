@@ -36,11 +36,10 @@ Para executar o teams-webapp.desktop corretamente, siga as etapas abaixo:
 1. Clonando o Repositório - Abrir o terminal e navegue até o diretório onde deseja clonar o repositório. Em seguida, execute o seguinte comando:<br>
 ```git clone https://github.com/ridsoliveira/Intune.git```
   - Esse comando vai criar um novo diretório chamado "Intune", que contém todo o conteúdo do repositório.
-2. Navegar até o Diretório do Repositório - Usando o comando cd: ```cd Intune```
+2. Navegar até o Diretório do Repositório - Usando o comando cd: ```cd Intune```<br>
 3. Executar o script teams-webapp.desktop com os comandos:
-```sudo cp teams-webapp.desktop /usr/share/applications```
+```sudo cp teams-webapp.desktop /usr/share/applications```<br>
 ```sudo chmod +x /usr/share/applications/teams-webapp.desktop```
-```sudo bash intune_install_script.sh```
 4. Você pode abrir o "Teams Web App" no menu de aplicativos
 
 Você pode utilizar os navegadores Chrome ou o Microsoft Edge. Se quiser usar o Chromium, deve alterar no teams-webapp.desktop o caminho para: /usr/bin/chromium-browser 
