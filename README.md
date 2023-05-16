@@ -1,16 +1,18 @@
 # Intune
-Scripts para automatizar rotinas de manutenção de dispositivos Linux\Ubuntu no Intune
+Scripts para automatizar rotinas de manutenção de dispositivos Linux/Ubuntu no Intune
 
 ## Pré-requisitos
-<li> Distribuições baseadas em Debian/Ubuntu versão 20 ou 22</li>
-<li> Git instalado. Caso você não tenha, realizar a instalação do Git com o seguinte comando no terminal: ```sudo apt-get install git``` </li>
+- Distribuições baseadas em Debian/Ubuntu versão 20 ou 22
+- Git instalado. Caso você não tenha, realize a instalação do Git com o seguinte comando no terminal:
+```sudo apt-get install git```
+
 
 
 Para executar qualquer script corretamente, siga as etapas abaixo:
-1. Clonando o Repositório - Abrir o terminal e navegue até o diretório onde deseja clonar o repositório. Em seguida, execute o seguinte comando:<br>
+1. **Clonando o Repositório** - Abrir o terminal e navegue até o diretório onde deseja clonar o repositório. Em seguida, execute o seguinte comando:<br>
 ```git clone https://github.com/ridsoliveira/Intune.git```
-  - Esse comando vai criar um novo diretório chamado "Intune", que contém todo o conteúdo do repositório.
-2. Navegar até o Diretório do Repositório - Usando o comando cd: ```cd Intune```
+- Esse comando vai criar um novo diretório chamado "Intune", que contém todo o conteúdo do repositório.
+2. **Navegar até o Diretório do Repositório** - Usando o comando cd: ```cd Intune```
 3. Executar o Script desejado com os comandos:
 ```chmod +x Nome_Do_Script.sh```
 ```./Nome_Do_Script.sh```
@@ -36,10 +38,10 @@ Para executar o teams-webapp.desktop corretamente, siga as etapas abaixo:
   - Esse comando vai criar um novo diretório chamado "Intune", que contém todo o conteúdo do repositório.
 2. Navegar até o Diretório do Repositório - Usando o comando cd: ```cd Intune```
 3. Executar o script teams-webapp.desktop com os comandos:
+```sudo cp teams-webapp.desktop /usr/share/applications```
 ```sudo chmod +x /usr/share/applications/teams-webapp.desktop```
 ```sudo bash intune_install_script.sh```
-
-2. Você pode abrir o "Teams Web App" no menu de aplicativos
+4. Você pode abrir o "Teams Web App" no menu de aplicativos
 
 Você pode utilizar os navegadores Chrome ou o Microsoft Edge. Se quiser usar o Chromium, deve alterar no teams-webapp.desktop o caminho para: /usr/bin/chromium-browser 
 Se for usar o Microsoft Edge, alterar para: /usr/bin/microsoft-edge.
