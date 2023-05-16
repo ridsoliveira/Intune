@@ -12,14 +12,18 @@ Para executar corretamente o script, siga as etapas abaixo:
 2. Agora, você pode executar o script no terminal do Ubuntu usando o seguinte comando:<br>
 ```sudo bash intune_install_script.sh```
 
-## Instalar o Microsoft Teams
-Para executar corretamente o script, siga as etapas abaixo:
+## Instalar o Microsoft Teams (Web)
+Até a data de elaboração deste documento, a Microsoft não disponibilizou uma versão do Teams para Linux. Como solução de contorno, foi criado um arquivo .desktop (teams-webapp.desktop) para representar o aplicativo do Teams, que aponta para a versão web do Teams. Esta abordagem facilita o acesso ao Teams Web, e os usuários terão a sensação de estar acessando o aplicativo do Teams instalado.
+
+Para criar executar o teams-webapp.desktop corretamente, siga as etapas abaixo:
 
 1. Conceda permissões de execução ao script antes de executá-lo. No terminal do Ubuntu, execute o seguinte comando:<br> 
-```chmod +x install-teams.sh```
+```sudo chmod +x /usr/share/applications/teams-webapp.desktop```
 
-2. Agora, você pode executar o script no terminal do Ubuntu usando o seguinte comando:<br>
-```sudo bash install-teams.sh```
+2. Você pode abrir o "Teams Web App" no menu de aplicativos
+
+Você pode utilizar os navegadores Chrome ou o Microsoft Edge. Se quiser usar o Chromium, deve alterar no teams-webapp.desktop o caminho para: /usr/bin/chromium-browser 
+Se for usar o Microsoft Edge, alterar para: /usr/bin/microsoft-edge.
 
 
 
